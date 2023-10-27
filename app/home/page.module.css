@@ -1,0 +1,137 @@
+.FlexContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: cornsilk;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .Title{
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+  }
+
+.CardContainer {
+  background-color:black;
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to the next line */
+    padding: 10px;
+    gap:20px;
+}
+
+.Card {
+    flex: 0 0 calc(20% - 40px); /* Adjust the width as needed */
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.Fontname{
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.Fontdescription{
+  font-size: 14px;
+  color: #666;
+}
+
+.Modalcontent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  padding: 16px;
+  height:auto;
+}
+
+.Modalimage {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+  max-height: 80vh;
+}
+
+.Moviedetailsmodal{
+  position: absolute ;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 700px;
+  box-shadow: 5px;
+  padding: 8px;
+  height: auto;
+}
+
+.MovieCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+/* styles.css */
+
+/* Style the Movie Details Modal */
+/*.Moviedetailsmodal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent overlay */
+  /*z-index: 999; /* Ensures the modal is on top of other content */
+  /* height: auto;
+} */
+
+/*.Modalcontent {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
+
+
+.MuiIconButton-root {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #333;
+}
+
+
+.Modalimage {
+  max-width: 100%;
+  max-height: 60vh; 
+  margin: 0 auto;
+}
+
+
+.ModalName {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.ModalDescription {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}*/
+
