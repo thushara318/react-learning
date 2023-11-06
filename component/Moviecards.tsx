@@ -3,12 +3,12 @@ import * as React from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import { Box, CardActionArea, IconButton, Modal } from '@mui/material';
+import { Box, Button, CardActionArea, IconButton, Modal } from '@mui/material';
 import page from '../app/home/page.module.css';
 import Image from "next/image";
 import CloseIcon from '@mui/icons-material/Close';
 
-export default function MovieCard({ name, description, img }: { name: string; description: string; img: string }) {
+export default function MovieCard({ name, description, img,showFav=true }: { name: string; description: string; img: string,showFav?:boolean }) {
   const [open, setOpen] = React.useState(false);
   const openModal = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -30,6 +30,7 @@ export default function MovieCard({ name, description, img }: { name: string; de
               {description}
             </div>
           </CardContent>
+          {showFav && <Button className={page.FavouriteButton}variant="contained">add to favourite</Button>}
         </CardActionArea>
       </Card>
       <Modal  sx={{
@@ -60,7 +61,8 @@ export default function MovieCard({ name, description, img }: { name: string; de
             width={100}
           />
         </div>
-        <div>{name}</div>
+        <div className={page.Moviedetailsmodaltitle}>{name}</div>
+        <div className={page.Moviedetailsmodaldescription}>{description}</div>
         </Box>
       </Modal>
     </>
