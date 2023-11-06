@@ -7,18 +7,6 @@ import movieList from '../../helper/movie-list.json'
 import { Key, useEffect, useState } from "react";
 
 export default function Home() {
-  // const [data, setData] = useState(movieList);
-
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     const response = await fetch("https://www.omdbapi.com/?apikey=86a74a68&page=10&i=tt3896198&s=all");
-  //     const data = await response.json();
-  //     console.log(data);
-  //     setData(data);
-  //   };
-
-  //   fetchData();
-  // }, []);
 
   const [data, setData] = useState({ Search: [] });
   const [searchQuery, setSearchQuery] = useState(''); 
@@ -42,16 +30,11 @@ export default function Home() {
     <main>
       <div className={styles2.FlexContainer}>
         <span className={styles2.Title}>Movie Search</span>
-        <TextField id="standard-basic" label="Search here" variant="standard" value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}/>
+        <span><TextField id="standard-basic" label="Search here" variant="standard" value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}/></span>
       </div>
       
       
-      {/* <div className={styles2.CardContainer}>
-        {movieList.Search.map((eachMovie: { Title: string; Year: string; Poster: string }, index: Key | null | undefined) => (
-          <Moviecards key={index} name={eachMovie.Title} description={eachMovie.Year} img={eachMovie.Poster} />
-        ))}
-      </div> */}
 <div className={styles2.CardContainer}>
         {searchQuery
           ? data.Search.map((eachMovie: { Title: string; Year: string; Poster: string }, index: Key | null | undefined) => (

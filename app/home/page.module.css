@@ -1,18 +1,17 @@
 .FlexContainer {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: cornsilk;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  gap:20px
   }
 
   .Title{
   font-size: 24px;
   font-weight: bold;
-  margin-bottom: 20px;
   color: #333;
   }
 
@@ -37,6 +36,9 @@
   font-weight: bold;
   color: #333;
   margin-bottom: 10px;
+  flex-grow: 1;
+  white-space: nowrap;
+
 }
 
 .Fontdescription{
@@ -76,62 +78,25 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
-/* styles.css */
 
-/* Style the Movie Details Modal */
-/*.Moviedetailsmodal {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent overlay */
-  /*z-index: 999; /* Ensures the modal is on top of other content */
-  /* height: auto;
-} */
-
-/*.Modalcontent {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.FavouriteButton {
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  flex-grow: 1;
   text-align: center;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: auto;
 }
 
-
-.MuiIconButton-root {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  color: #333;
-}
-
-
-.Modalimage {
-  max-width: 100%;
-  max-height: 60vh; 
-  margin: 0 auto;
-}
-
-
-.ModalName {
+.Moviedetailsmodaltitle {
   font-size: 24px;
   font-weight: bold;
-  color: #333;
   margin-bottom: 10px;
 }
 
-.ModalDescription {
+.Moviedetailsmodaldescription {
   font-size: 16px;
-  color: #666;
-  margin-bottom: 20px;
-}*/
+  margin-bottom: 10px;
+}
 
